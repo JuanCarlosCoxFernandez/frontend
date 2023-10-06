@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="gotoHome()">Home</ion-button>
+    </ion-buttons>
+    <ion-title>Create Tasks</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Titulo de la tarea</ion-label>
+      <ion-input [(ngModel)]="TaskTitle" name="TaskTitle" required></ion-input>
+    </ion-item>
+    <!-- Agrega más campos para los atributos del elemento si es necesario -->
+    <ion-item>
+      <ion-label position="floating">Contenido</ion-label>
+      <ion-input [(ngModel)]="TaskContent" name="TaskContent" required></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="addTask()">Crear Elemento</ion-button>
+</ion-content>

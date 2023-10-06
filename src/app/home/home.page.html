@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Organice Yourself
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Organice Yourself</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <h1 class="brand">Notes</h1>
+    <p>Remind yourself of all things</p>
+  </div>
+  <ion-button expand="block" (click)="gotoCreateTask()">Create Task</ion-button>
+  <br>
+  <ion-button expand="block" (click)="gotoTasks()">Show Tasks</ion-button>
+</ion-content>

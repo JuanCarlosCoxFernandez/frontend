@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="gotoHome()">Home</ion-button>
+    </ion-buttons>
+    <ion-title>Tasks</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let t of task">
+      <ion-label>
+        <h1>{{t.task_title}}</h1>
+        <p>{{t.task_content}}</p>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6" class="ion-text-center">
+              <ion-button style="width: 75%;" (click)="presentAlert(t.id,t.task_title,t.task_content)">Update task</ion-button>
+            </ion-col>
+            <ion-col size="6" class="ion-text-center">
+              <ion-button color="danger" style="width: 75%;" (click)="DeleteTask(t.id)">Finished</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
